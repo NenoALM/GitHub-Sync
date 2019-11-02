@@ -1,0 +1,18 @@
+trigger:
+- master
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+#variables:
+#  RemoteGit.RepoUrl: 'https://nenoalm:$(AzBoards.Token)@dev.azure.com/nenoalm/DevOps/_git/GitHubSync'
+#  RemoteGit.Branch:  'master'
+
+steps:
+- script: |
+    set -x
+    git remote add target $(RemoteGit.RepoUrl)
+    git checkout $(Build.SourceBranchName)
+    git pull target $(RemoteGit.Branch) --tags
+    git push -u target $(RemoteGit.Branch) --tags
+  displayName: 'Push changes to remote Git repository'
