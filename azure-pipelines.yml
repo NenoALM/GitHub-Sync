@@ -1,15 +1,16 @@
 trigger:
-- github-master
+- master
 
 pool:
   vmImage: 'ubuntu-latest'
 
 variables:
-  GitHub.RepoUrl: 'https://github.com/NenoALM/GitHubSync.git'
+  GitHub.RepoUrl: 'https://nenoALM:$(GitHub.Token)@github.com/NenoALM/GitHubSync.git'
   GitHub.Branch:  'master'
 
 steps:
 - script: |
+    set -x
     git remote add target $(GitHub.RepoUrl)
     git pull target $(GitHub.Branch) --tags
     git push -u target $(GitHub.Branch) --tags
