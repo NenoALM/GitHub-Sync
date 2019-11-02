@@ -5,7 +5,7 @@ pool:
   vmImage: 'ubuntu-latest'
 
 variables:
-  GitHub.RepoUrl: 'ttps://github.com/NenoALM/GitHubSync.git'
+  GitHub.RepoUrl: 'https://github.com/NenoALM/GitHubSync.git'
   GitHub.Branch:  'master'
 
 steps:
@@ -13,4 +13,4 @@ steps:
     git remote add target $(GitHub.RepoUrl)
     git pull target $(GitHub.Branch) --tags
     git push -u target $(GitHub.Branch) --tags
-  displayName: 'Run a multi-line script'
+  displayName: 'Push changes to remote Git repository'
