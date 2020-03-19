@@ -5,7 +5,7 @@ pool:
   vmImage: 'ubuntu-latest'
 
 #variables:
-#  RemoteGit.RepoUrl: 'https://nenoalm:$(AzBoards.Token)@dev.azure.com/nenoalm/DevOps/_git/GitHubSync'
+#  RemoteGit.RepoUrl: 'https://nenoalm:$(AzRepos.Token)@dev.azure.com/nenoALM/DevOps/_git/GitHubSync'
 #  RemoteGit.Branch:  'master'
 
 steps:
