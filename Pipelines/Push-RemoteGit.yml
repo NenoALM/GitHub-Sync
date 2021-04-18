@@ -19,5 +19,5 @@ steps:
     echo git pull
     git pull target $(RemoteGit.Branch) --tags
     echo git push
-    git push -u target $(RemoteGit.Branch) --tags
+    git push -u target main --tags
   displayName: 'Push changes to remote Git repository'
