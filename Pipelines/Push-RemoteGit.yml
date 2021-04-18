@@ -1,12 +1,9 @@
 trigger:
-- master
+- main
 
-pool:
-  vmImage: 'ubuntu-latest'
-
-#variables:
-#  RemoteGit.RepoUrl: 'https://nenoalm:$(AzRepos.Token)@dev.azure.com/nenoALM/DevOps/_git/GitHubSync'
-#  RemoteGit.Branch:  'master'
+# required variables:
+#   RemoteGit.RepoUrl: 'https://nenoalm:$(AzRepos.Token)@dev.azure.com/nenoALM/DevOps/_git/GitHubSync'
+#   RemoteGit.Branch:  'master'
 
 steps:
 - script: |
