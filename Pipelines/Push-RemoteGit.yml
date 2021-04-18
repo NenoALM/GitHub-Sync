@@ -9,6 +9,7 @@ trigger:
 steps:
 - script: |
     set -x
+    git config pull.rebase false
     git remote add target $(RemoteGit.RepoUrl)
     git checkout $(Build.SourceBranchName)
     git pull target $(RemoteGit.Branch) --tags
