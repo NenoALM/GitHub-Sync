@@ -7,6 +7,9 @@ trigger:
 #   AzRepos.Token:      <secret>
 
 steps:
+- checkout: self
+  clean: true
+  
 - script: |
     set -x
     git config pull.rebase false
