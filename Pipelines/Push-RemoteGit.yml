@@ -3,7 +3,8 @@ trigger:
 
 # required variables:
 #   RemoteGit.RepoUrl: 'https://nenoalm:$(AzRepos.Token)@dev.azure.com/nenoALM/DevOps/_git/GitHubSync'
-#   RemoteGit.Branch:  'master'
+#   RemoteGit.Branch:  'main'
+#   AzRepos.Token:      <secret>
 
 steps:
 - script: |
